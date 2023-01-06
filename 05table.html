@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>테이블 관련 태그</title>
+  <style> /* embeded css style    css 안 주석은 이렇게*/
+      table{ border : 1px solid black; width: 950px; outline-offset: -1px}
+      /* 테이블 전체  경계선(1px 1줄크기)생성  테이블 전체 950px크기 , 테이블 전체 테두리 줄 outline-offset: -1px */
+      th,td{ border:  1px solid black; padding: 10px}
+      /*행 열의 한칸 크기 지정 10 px */
+      tr:nth-child(even) {background: aliceblue}
+      /*임의의수 n, tr(행)중에 짝수(even)에 있는 걸 {background: aliceblue}이렇게 하겠다. 배경-파랑 */
+      tr:nth-child(odd) {background: aquamarine}
+      tr:nth-child {background: beige}
+      tr{height: 35px}
+      table:nth-child(2){ width: 600px}  /* 기본 스팩 지정 헤드스타일에 넣음 2번째 테이블의 너비 450으로 지정*/
+    /*복잡한 표2에 대한 스타일 -너비 지정 */
+    table:nth-child(5){ width: 850px}   /*5번째 테이블은 850*/
+    table:nth-child(5) th { width: 141px}  /*5번째 테이블의 각칸(th) 너비 141*/
+    table:nth-child(5) td { width: 141px}  /*5번째 테이블의 각칸(td) 너비 141*/
+    /*복잡한 표2 안쪽 테이블에 대한 스타일 -너비지정 */
+    table:nth-child(5) table th {width: 121px}
+    table:nth-child(5) table td {width: 121px}
+  </style>
+</head>
+<body>
+    <h1>테이블 관련 태그</h1>
+    <h2>개요 </h2>
+    <p>여러 종류의 데이터를 일목요연하게 2차원 형태의 표로 나타내기 위해 사용 - 표만들기 </p>
+    <p>table태그로 테이블 시작을 ,
+      tr태그로 테이블의 행을,
+      th태그로 테이블의 제목을 ,
+      td태그로 테이블의 내용을 나타냄</p>
+    <p>테이블의 디자인 관련 속성은 css를 이용
+    (width, height , padding, border-collapse)</p>
+
+    <h3> 사원 테이블 </h3>   <!-- css가 디자인  html은 내용을 만듬-->
+    <table >
+      <tr>
+        <th>사원 번호</th>
+        <th>이름</th>
+        <th>성</th>
+        <th>이매일</th>
+        <th>전화번호</th>
+        <th>입사일</th>
+        <th>직책</th>
+        <th>연봉</th>
+        <th>수당</th>
+        <th>상사번호</th>
+        <th>부서</th>
+      </tr>     <!--이행은 제목이 될 행 th -->
+      <tr>
+        <td>100</td>
+        <td>Steven</td>
+        <td>King</td>
+        <td>SKing</td>
+        <td>123.4567.6789</td>
+        <td>2003-06-17</td>
+        <td>AD_PRES</td>
+        <td>24000</td>
+      </tr>     <!--이 밑으론 테이블의 내용이 될 행들 td -->
+      <tr>
+        <td>100</td>
+        <td>Steven</td>
+        <td>King</td>
+        <td>SKing</td>
+        <td>123.4567.6789</td>
+        <td>2003-06-17</td>
+        <td>AD_PRES</td>
+        <td>24000</td>
+      </tr>
+      <tr>
+        <td>100</td>
+        <td>Steven</td>
+        <td>King</td>
+        <td>SKing</td>
+        <td>123.4567.6789</td>
+        <td>2003-06-17</td>
+        <td>AD_PRES</td>
+        <td>24000</td>
+      </tr>
+      <tr>
+        <td>100</td>
+        <td>Steven</td>
+        <td>King</td>
+        <td>SKing</td>
+        <td>123.4567.6789</td>
+        <td>2003-06-17</td>
+        <td>AD_PRES</td>
+        <td>24000</td>
+      </tr>
+      <tr>
+        <td>100</td>
+        <td>Steven</td>
+        <td>King</td>
+        <td>SKing</td>
+        <td>123.4567.6789</td>
+        <td>2003-06-17</td>
+        <td>AD_PRES</td>
+        <td>24000</td>
+      </tr>
+    </table>
+
+    <h2> 복잡한 표 만들기1 </h2>
+    <p> 복잡한 형태의 테이블을 작성하려면 colspan/rowspan 속성을 적절히 사용하면 됨 </p>
+    <p> colspan은 여러 열을 합쳐 하나의 열로 만듬   , rowspan은 여x러행을 합쳐 하나의 행을 만듬 </p>
+    <p> 더 복잡한 표를 만들기 위해 표안에 표를 포함 시킬 수도 있음(비추) </p>
+    <p> 행은 tr 열은 td 라고 생각하면 되고  td의 의미답게 내용을 td안에 쓰면 된다.</p>
+
+    <h3> </h3>
+    <img src="img/table_span.jpg"  width="25%" height="25%">    <!--img src= 가져올 그림 가로 세로 길이 조정 -->
+    <!--문제 위에 그림같은 표를 만들자!-->
+
+    <table >  <!-- 행과 열 합쳐서 표 만들기 -->
+      <tr>
+        <td colspan="5"> 1</td>
+        <!--<td> 2</td>
+        <td> 3</td>
+        <td> 4</td>
+        <td> 5</td> -->
+
+      </tr>     <!--이행은 제목이 될 행 th -->
+      <tr>
+        <td rowspan="2"> 6</td>
+        <td rowspan="2"> 7</td>
+        <td rowspan="2"> 8</td>
+        <td rowspan="2" colspan="2"> 9</td>
+        <!-- <td> 10</td> -->
+      </tr>     <!--이 밑으론 테이블의 내용이 될 행들 td -->
+      <tr>
+       <!-- <td> 11</td> -->
+       <!-- <td> 12</td> -->
+       <!-- <td> 13</td> -->
+       <!--<td>  14</td>-->
+        <!--<td> 15</td>-->
+      </tr>
+      <tr>
+       <td colspan="2"> 16</td>     <!--바로 주석처리 하는 방법 주석 부분 끌어서 컨트롤 쉬프트 / 를 누르면 됨-->
+        <!--<td> 17</td>-->
+        <td colspan="3"> 18</td>
+        <!--<td> 19</td>
+        <td> 20</td>-->
+      </tr>
+      <tr>
+        <td colspan="3"> 21</td>
+        <!--<td> 22</td>
+        <td> 23</td>-->
+        <td colspan="2"> 24</td>
+       <!-- <td> 25</td>-->
+      </tr>
+    </table>
+
+    <h2> 테이블 너비 지정 </h2>
+    <p> 테이블 요소의 크기를 지정하는 단위는 px, %임 </p>
+    <p> 크기를 px(픽셀)로 지정하는 경우, 고정크기로 설정되어 브라우저의 크기에 상관없이 테이블의 크기는 변화없음  </p>
+    <p> 크기를 %로 지정하는 경우, 가변크기로 설정되어 브라우저의 크기에 상관없이 테이블의 크기도 변함  </p>
+
+    <!--아래 테이블은 전체 창의 크기에 45퍼센트라서 창을 줄이면 테이블도 줄어든다, 윗 테이블은 그냥 창을 줄여도 고정-->
+    <table style="width:750px; border: 1px solid red">
+        <tr> <td>테이블 1 (750px)</td></tr>
+    </table>
+
+    <table style="width:45%; border: 1px solid blue">
+      <tr><td>테이블 1 (45%) </td></tr>
+    </table>
+
+    <h3>복잡한 표 2 </h3>
+    <p> 표안에 표를 집어 넣어서 표를 만들 수 있다.</p>
+
+
+    <hr>
+    <table>
+        <tr><th> 훈련과정</th>
+            <td COLSPAN="2"> AWS 클라우드기반 자바&amp;스프링&amp; <br>리엑트 풀스택 개발자 양성 </td>
+            <th> 훈련기간 </th>
+            <td COLSPAN="2"> 2022-04-18 ~ 2022-10-19</td>
+        </tr>
+        <tr><th> 평가일시 </th>
+            <td> 2022년 05월 04일 </td>
+            <th> <b>훈련생</b></th>
+            <td> &nbsp;&nbsp;&nbsp;&nbsp;(인)</td>
+            <th> 훈련교사 </th>
+            <td> 홍 길 동 (인)</td>
+        </tr>
+        <tr><td colspan="6" style="padding: 0">   <!--하나의 행자체가 테이블이기 때문에 모든 행을 묶어준다.-->
+            <table style="outline: 0px solid black; margin: -2px">
+                <!--여백 지정 (패딩)-안쪽 여백 ,(마진)-바깥 여백 다음 줄 간격  마진으로 표와표사이 간격을 없애버림 -2px-->
+                <tr>
+                    <th colspan="2" >교과목명</th>
+                    <th>평가방법</th>
+                    <th>배점</th>
+                    <th>점수</th>
+                    <th>총점</th>
+                    <th>성취수준</th>
+                </tr>
+                <tr>
+                    <td rowspan="2" colspan="2"> 데이터베이스 </td>
+                    <td> 서술형/선택형 </td>
+                    <td> 30 </td>
+                    <td> &nbsp;  </td>
+                    <td rowspan="2"> &nbsp; </td>
+                    <td rowspan="2"> &nbsp;  </td>
+                </tr>
+                <tr>
+                    <td>포트폴리오 </td>
+                    <td>70 </td>
+                    <td> </td>
+
+
+                </tr>
+
+            </table>
+            </td>
+        </tr>
+
+        <tr><th>성취환산수준</th>
+            <th>매우우수(5수준)</th>
+            <th>우수(4수준)</th>
+            <th>보통(3수준)</th>
+            <th>미흡(2수준)</th>
+            <th>매우미흡(1수준)</th>
+
+        </tr>
+
+        <tr><td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+    </table>
+
+
+</body>
+</html>
