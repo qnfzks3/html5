@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>color</title>
+</head>
+<body>
+    <h1> 색상 태그 관련 </h1>
+    <h2>html4에서의 색 표현 </h2>
+    <p> html에서 색을 표현하는 방법은 1. 색상명, 2. RGB 색상값 , 3. 16진수 색상값등이 있음</p>
+    <p> 단, 주요 브라우져는 140여개 색상을 지원함  </p>
+    <p> 자세한 색상 이름은 htmlcolorcodes.com을 참조</p>
+    <p> html의 색상관련 속성으로 색을 지정하는 것보다는 css를 통해 색상을 지정하는 것을 추천 </p>
+    <p>  </p>
+
+    <div style= "background: red; color: white">빨강 </div>
+    <div style= "background: orange">주황 </div>
+    <div style= "background: yellow">노랑 </div>
+    <div style= "background: green">초록 </div>
+    <div style= "background: blue">파랑 </div>
+    <div style= "background: purple">보라 </div>
+    <hr>
+
+    <p>16진수 색상값은 RGB 색상값을 16진수로 각각 변환한 것</p>
+    <p>R,G,B 색상값은 00~FF 범위를 가짐 </p>
+    <p>표기 방법은 &sharp; 다음에 3개의 16진수 값을 정의 </p>
+
+
+    <div style= "background: #FF0000; color: white">빨강 </div>
+    <div style= "background: #FFA500">주황 </div>
+    <div style= "background: #FFFF00">노랑 </div>
+    <div style= "background: #00FF00">초록 </div>
+    <div style= "background: #0000FF">파랑 </div>
+    <div style= "background: #800080">보라 </div>
+
+    <hr>
+    <p>RGB 색상값은 RGB 색상을 10진수로 각각 변환한 것</p>
+    <p>R,G,B 색상값은 00~255 범위를 가짐 </p>
+    <p>표기 방법은 &sharp; 다음에 3개의 16진수 값을 정의 </p>
+    <p>RGB 색상에 투명도를 적용하려면 rgba()를 사용 </p>
+
+    <div style= "background: rgb(255,0,0); color: white">빨강 </div>
+    <div style= "background: #FFA500">주황 </div>
+    <div style= "background: rgb(255,255,0)">노랑 </div>
+    <div style= "background: rgb(0,128,0)">초록 </div>
+    <div style= "background: rgb(0,0,255)">파랑 </div>
+    <div style= "background: #800080">보라 </div>
+
+    <hr>
+    <div style= "background: rgba(255,0,0,0); color: white">빨강 </div>
+    <div style= "background: rgba(255,0,0,0.2); color: white">빨강 </div>
+    <div style= "background: rgba(255,0,0,0.4); color: white">빨강 </div>
+    <div style= "background: rgba(255,0,0,0.6); color: white">빨강 </div>
+    <div style= "background: rgba(255,0,0,0.8); color: white">빨강 </div>
+    <div style= "background: rgba(255,0,0,1); color: white">빨강 </div>
+
+    <h2>html5에서의 색 표현 </h2>
+    <p>html5에서는 색상/채도/명도등으로 색상을 표현하는 hsl/hsla 색상코드가 도입 </p>
+    <p> 16진수 vs rgb 색상 vs hsl색상  </p>
+
+    <hr>
+    <p>그외 hwb, <b>cmyk</b> 색상코드로도 색을 표현할 수 있음 </p>
+    <p>단, html에서는 미지원 , css4에서 지원예정</p>
+
+</body>
+</html>
