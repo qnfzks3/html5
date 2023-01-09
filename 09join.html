@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title> 회원가입 폼 </title>
+    <style>
+        td:first-child {text-align: right; font-weight: bold}
+        label{font-weight: bold}
+        input,select {padding: 5px }  /*빈칸,선택창 크기 조정*/
+        button{padding: 3px} /*버튼 크기 조정*/
+        tr {height: 35px} /*tr들 끼리의 간격 -행들간의 간격 조정*/
+        img{margin-left: -10px} /*모든 사진을 왼쪽으로(-) 10만큼 이동해라*/
+    </style>
+
+</head>
+<body>
+    <div style="width: 1250px;">
+    <table>
+        <tr>
+            <th>이름</th>
+            <td> <input type="text"  size="7"></td>
+        </tr>
+        <tr>
+            <th> 주민등록번호 </th>
+            <td> <input type="text" size="7">-<input type="text" size="7"></td>
+        </tr>
+        <tr>
+            <th>아이디</th>
+            <td colspan="3"> <input type="text" size="12"> </td>
+            <td style="color: grey">6~16자의 영문 소문자 , 숫자와 특수기호(_)만 사용할 수 있습니다.</td>
+        </tr>
+        <tr>
+            <th>비밀번호</th>
+            <td colspan="3"><input type="text"  minlength="6" maxlength="16" size="12"></td>
+            <td style="color: grey" colspan="8"> 6~16자의 영문 소문자 , 숫자와 특수문자만 사용할 수 있습니다.</td>
+        </tr>
+        <tr>
+            <th>비밀번호 확인</th>
+            <td colspan="3"> <input type="text" minlength="6" maxlength="16" size="12"></td>
+            <td style="color: grey" colspan="6">이전 항목에서 입력했던 비밀번호를 한번 더 입력하세요 </td>
+        </tr>
+        <tr>
+            <th> 우편번호</th>
+            <td> <input type="text" size="1"> - <input type="text" size="1"> </td>
+            <td><button> 우편번호 찾기</button></td>
+        </tr>
+        <tr>
+            <th>주소</th>
+            <td colspan="2"> <input type="text" size="20"></td>
+            <td colspan="2"> <input type="text" size="20"></td>
+        </tr>
+        <tr>
+            <th>전자우편 주소</th>
+            <td> <input type="text" size="14">@ </td>
+            <td> <input type="text" size="14"> </td>
+        </tr>
+
+    </table>
+    </div>
+<br>
+    <br>
+    <br>
+
+      <form>
+          <div><label for="name">이름<input type="text" name="name" id="name" size="7"></label></div>
+          <div><label for="jumin">주민등록번호<input type="text" name="jumin" id="jumin" maxlength="6" size="7"></label>
+          - <input type="text" name="jumin" maxlength="7" size="7"> </div>
+
+      </form>
+
+
+    <hr>  <!--다시--> <!--테이블은 위에 테이블이 잡히면 밑에 테이블이 따라간다.-->
+    <h1>일반 회원</h1>
+    <form name="join">
+    <table style="width: 850px">
+        <tr>
+            <td style="width: 25%";> 이름 </td>
+            <td>&nbsp;</td>
+            <td><input type="text" name="name"  value="홍길동"> </td>
+        </tr>
+        <tr>
+            <td>주민등록번호 </td>
+            <td>&nbsp;</td>
+            <td><input type="text" name="jumin1"  value="123456" size="7" maxlength="6"> -
+                <input type="text" name="jumin2"  value="123456" size="7" maxlength="7"> </td>
+        </tr>
+        <tr>
+            <td>아이디 </td>
+            <td>&nbsp;</td>
+            <td><input type="text" name="useid"  size="10" maxlength="16" minlength="6">
+                6~16자의 영문 소문자,숫자와 특수기호(_)만 사용할 수 있습니다.</td>
+        </tr>
+        <tr>
+            <td>비밀번호 </td>
+            <td>&nbsp;</td>
+            <td><input type="password" name="passwd"  size="10" maxlength="16" minlength="6">
+                6~16자의 영문 대소문자,숫자와 특수기호(_)만 사용할 수 있습니다.</td>
+        </tr>
+        <tr>
+            <td>비밀번호 확인 </td>
+            <td>&nbsp;</td>
+            <td><input type="password" name="repasswd"  size="10" maxlength="16" minlength="6">
+                이전 항목에서 입력했던 비밀번호를 한번 더 입력하세요</td>
+        </tr>
+        <tr>
+            <td>우편번호 </td>
+            <td>&nbsp;</td>
+            <td><input type="text" name="zip1"  size="1" maxlength="3"> -
+                <input type="text" name="zip2"  size="1" maxlength="3">
+                <button type="button">우편번호 찾기</button></td>
+        </tr>
+        <tr>
+            <td>주소</td>
+            <td>&nbsp;</td>
+            <td><input type="text" name="addr1"  size="25">
+                <input type="text" name="addr2"  size="25">
+                </td>
+        </tr>
+        <tr>
+            <td>전자우편 주소</td>
+            <td>&nbsp;</td>
+            <td><input type="text" name="email1"  size="12">@
+                <input type="text" name="email2"  size="12">
+                <select name="email3">
+                    <option>--선택하세요--</option>
+                    <option>google.com</option>
+                    <option>naver.com</option>
+                    <option>hanmail.net</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>개인 연락처</td>
+            <td>&nbsp;</td>
+            <td>
+                <select name="phone1">
+                    <option>--국번--</option>
+                    <option>010</option>
+                    <option>011</option>
+                    <option>02</option>
+                </select>-
+                <input type="text" name="phone2" size="3"> -
+                <input type="text" name="phone2" size="3">
+            </td>
+        </tr>
+        <tr>
+            <td>자동가입방지</td>
+            <td>&nbsp;</td>
+            <td>
+                <img src="img/captcha.png">
+                <input type="text" name="captcha" size="15">
+                <button type="button"> 다른 captcha 보기</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" style="text-align: center">
+                <button type="button">입력완료 </button>
+                <button type="button">취소하기 </button>
+            </td>
+        </tr>
+
+
+
+
+    </table>
+    </form>
+
+
+
+</body>
+</html>
