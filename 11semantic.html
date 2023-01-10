@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>시멘틱 웹 관련 요소</title>
+</head>
+<body>
+    <h1> 시멘틱 웹 관련 요소</h1>
+    <h2> 개요</h2>
+    <p> 시멘틱 태그란 브라우저, 검색엔진 ,개발자 모두에게 콘텐츠의 의미를 명확히 설명하는 역할을 담당하는 요소</p>
+    <p>시맨틱 태그를 이용하면 컴퓨터가 HTML요소의 의미를 보다 명확히 해석하고 데이터로 활용할 수 있는 시맨틱 웹을 실현할 수 있음</p>
+
+    <!--시멘틱 태그의 레이아웃 구성 차이를 알아보자-->
+    <!--검색 엔진이 중요 데이터등을 알아볼 때 용이함 - <b></b> 로 진하게 하는거보다 em (emphasize)으로 강조하는게 훨씬 효율적-->
+    <h2>시맨틱 태그 사용 이전 레이아웃 구성 </h2>
+    <div id="header"></div>
+    <div id="nav"></div>
+    <div id="main">
+        <div id="section"></div>
+        <div id="aside"></div>
+    </div>
+    <div id="footer"></div>
+    <!--웹을 사용할 때, 헤더, 밑에 매뉴 매인, 아래 부수적인 내용들등 다양한 하게 존재- 형식을 구성-->
+    <h2>시멘틱 태그 용어 설명</h2>
+    <p>header : 웹 사이트 로고, 검색폼을 나타내는 영역 </p>
+    <p>nav : 웹 사이트를 궝하는 메뉴gnb(global nevigation bar)를 나타내는 영역</p>
+    <p>main : 웹 사이트의 중요 컨텐츠를 표시하는 영역</p>
+    <p>section : 중요 컨텐츠를 구성하는 하위 컨텐츠를 그룹화 할 때 사용 </p>
+    <p>article : 중요 컨텐츠들을 구성하는 하위 컨텐츠가 보여지는 영역 </p>
+    <p>aside : 웹 사이트 중요 컨텐츠와 관련없는 내용을 표시하는 영역</p>
+    <p>footer : 웹 사이트 저작권이나 관리자 정보등을 나타내는 영역</p>
+
+
+    <h2>시멘틱 태그 사용 레이아웃 구성</h2>
+    <header></header>
+    <nav></nav>
+    <main>
+      <section><article></article></section>
+      <aside></aside>
+    </main>
+    <footer></footer>
+
+
+
+</body>
+</html>
