@@ -5,6 +5,45 @@
     <title>write</title>
 </head>
 <body>
+<header>
+    <div> <H1>JSP 프로젝트 V1 </H1> </div>
+    <ul>
+        <li><a href="index.html">Home </a></li>
+        <li><a href="join.html">회원가입 </a></li>
+        <li><a href="login.html">로그인 </a></li>
+        <li><a href="list.html">게시판 </a></li>
+        <li><a href="myinfo.html">회원정보 </a></li>
+    </ul>
+</header>
+<main>
+    <h2>새글쓰기</h2>
+    <form name="write">
+        <table>
+            <tr>
+                <th> 제목  </th>
+                <td> <input type="text" name="title" id="title"> </td>
+            </tr>
+            <tr>
+                <th><label for="uid">작성자</label> </th>
+                <td><input type="text" name="uid" id="uid" value="qnfzks3" readonly></td>
+            </tr>
+            <tr>
+                <th> 작성일  </th>
+                <td> 2022-12-10 12:10:15 (123)</td>
+            </tr>
+            <tr>
+                <th><label for="contents"> 본문</label> </th>
+                <td> <textarea name="contents" id="contents" rows="7" cols="55"></textarea> </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="button"> 입력완료</button>
+                    <button type="reset"> 다시입력</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</main>
 
 </body>
 </html>
